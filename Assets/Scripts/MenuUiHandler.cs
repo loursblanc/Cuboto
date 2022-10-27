@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuUiHandler : MonoBehaviour
 {
-    public void StarNew()
+    public void StartNew()
     {
         SceneManager.LoadScene(1);  
     }
@@ -18,5 +18,10 @@ public class MenuUiHandler : MonoBehaviour
     #else
         Application.Quit(); // original code to quit Unity player
     #endif
+    }
+
+    public void startHighScore()
+    {
+        SceneManager.LoadScene(2);
     }
 }
