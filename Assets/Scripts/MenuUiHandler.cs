@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class MenuUiHandler : MonoBehaviour
 {
+
+    [SerializeField] private TMP_InputField playerNameImputField;
+
     public void StartNew()
     {
         SceneManager.LoadScene(1);  
+    }
+
+    public void startHighScore()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void Exit()
@@ -20,8 +30,10 @@ public class MenuUiHandler : MonoBehaviour
     #endif
     }
 
-    public void startHighScore()
+   
+
+    public void SetPlayerName()
     {
-        SceneManager.LoadScene(2);
+        MainManager.Instance.PlayerName = playerNameImputField.text;
     }
 }
