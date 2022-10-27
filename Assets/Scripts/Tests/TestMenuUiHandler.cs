@@ -10,7 +10,8 @@ public class TestMenuUiHandler
     [Test]
     public void TestMenuUiHandlerSimplePasses()
     {
-        Assert.AreEqual(true, true);
+        //Assert.AreEqual(true, true);
+        Assert.AreEqual(true, false);
     }
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
