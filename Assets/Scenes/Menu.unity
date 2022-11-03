@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName: 
+  Score: 0
 --- !u!4 &207711247
 Transform:
   m_ObjectHideFlags: 0
@@ -992,8 +993,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 684621065}
-        m_TargetAssemblyTypeName: MenuUiHandler, Assembly-CSharp
-        m_MethodName: startHighScore
+        m_TargetAssemblyTypeName: MenuUiHandler, Test
+        m_MethodName: StartHighScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
-    public string PlayerName;
+    public string PlayerName = "---";
+    public int Score = 0; 
 
     private void Awake()
     {

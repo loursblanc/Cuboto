@@ -8,14 +8,14 @@ using TMPro;
 public class MenuUiHandler : MonoBehaviour
 {
 
-    [SerializeField] private TMP_InputField playerNameImputField;
+    public TMP_InputField playerNameImputField;
 
     public void StartNew()
     {
-        SceneManager.LoadScene(1);  
+        SceneManager.LoadScene(1);
     }
 
-    public void startHighScore()
+    public void StartHighScore()
     {
         SceneManager.LoadScene(2);
     }
