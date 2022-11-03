@@ -9,47 +9,34 @@ using UnityEngine.TestTools;
 public class MenuUiHandlerTest
 {
 
-    private MenuUiHandler instance;
+    private MenuUiHandler menuInstance;
+    private NavigateUiHandler navigateInstance;
 
 
     [OneTimeSetUp]
     public void Setup()
     {
-        GameObject go = new GameObject();
-        instance = go.AddComponent<MenuUiHandler>();
-        instance.playerNameImputField = go.AddComponent<TMPro.TMP_InputField>();
-        go.AddComponent<MainManager>();
+        GameObject goMenu = new GameObject();
+        menuInstance = goMenu.AddComponent<MenuUiHandler>();
+        menuInstance.playerNameImputField = goMenu.AddComponent<TMPro.TMP_InputField>();
+        goMenu.AddComponent<MainManager>();
+        GameObject goNavigate = new GameObject();
+        navigateInstance =  goNavigate.AddComponent<NavigateUiHandler>();
     }
 
     [OneTimeTearDown]
     public void TearDown()
     {
-        GameObject.Destroy(instance);
+        GameObject.Destroy(menuInstance);
     }
 
-    
-    [UnityTest]
-    public IEnumerator StarNewGoGoodSceneTest()
-    {
-        instance.StartNew();
-        yield return null;
-        Assert.AreEqual(SceneManager.GetActiveScene().buildIndex, 1);
-    }
-
-    [UnityTest]
-    public IEnumerator StartHighScoreGoGoodSceneTest()
-    {
-        instance.StartHighScore();
-        yield return null;
-        Assert.AreEqual(SceneManager.GetActiveScene().buildIndex, 2);
-    }
 
     [UnityTest]
     public IEnumerator SetPlayerNameIsOk()
     {
-        instance.playerNameImputField.text = "UnitTest";
-        instance.SetPlayerName();
-        instance.StartNew();
+        menuInstance.playerNameImputField.text = "UnitTest";
+        menuInstance.SetPlayerName();
+        navigateInstance.StartMain();
         yield return null;
         Assert.AreEqual(MainManager.Instance.PlayerName, "UnitTest");
 

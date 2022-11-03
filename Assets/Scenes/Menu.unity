@@ -591,6 +591,7 @@ GameObject:
   - component: {fileID: 684621062}
   - component: {fileID: 684621061}
   - component: {fileID: 684621065}
+  - component: {fileID: 684621066}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -696,6 +697,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameImputField: {fileID: 862146994}
+--- !u!114 &684621066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684621060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d74797bd33173b45ad8c9cf57696cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862146992
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,8 +1005,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684621065}
-        m_TargetAssemblyTypeName: MenuUiHandler, Test
+      - m_Target: {fileID: 684621066}
+        m_TargetAssemblyTypeName: NavigateUiHandler, Test
         m_MethodName: StartHighScore
         m_Mode: 1
         m_Arguments:
@@ -1419,8 +1432,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684621065}
-        m_TargetAssemblyTypeName: MenuUiHandler, Assembly-CSharp
+      - m_Target: {fileID: 684621066}
+        m_TargetAssemblyTypeName: NavigateUiHandler, Test
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1621,9 +1634,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684621065}
-        m_TargetAssemblyTypeName: MenuUiHandler, Assembly-CSharp
-        m_MethodName: StartNew
+      - m_Target: {fileID: 684621066}
+        m_TargetAssemblyTypeName: NavigateUiHandler, Test
+        m_MethodName: StartMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
