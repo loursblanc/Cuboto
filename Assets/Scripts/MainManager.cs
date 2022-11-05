@@ -11,6 +11,8 @@ public class MainManager : MonoBehaviour
 
     private void Awake()
     {
+        SaveData saveData = new SaveData();
+        saveData.SaveHighScores();
         if(Instance != null)
         {
             Destroy(Instance);
