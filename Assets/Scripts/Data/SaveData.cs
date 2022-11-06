@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class SaveData
 {
+
+    string SaveHighScorefilePath = Application.persistentDataPath + "/savefile.json";
+
+
     public void SaveHighScores()
     {
 
@@ -19,14 +23,27 @@ public class SaveData
         highScore.PlayerName = "PlayerNameTest1";
         highScore.Score = 1;
         scoreData.highScores.Add(highScore);
-
-       
-
         string json = JsonUtility.ToJson(scoreData);
-        string filePath = Application.persistentDataPath + "/savefile.json";
-        File.WriteAllText(filePath, json);
+       
+        File.WriteAllText(SaveHighScorefilePath, json);
 
     }
 
+    public List<HighScore> loadHighScores()
+    {
 
+        ScoreData scoreData = new ScoreData(); ;
+        if (File.Exists(SaveHighScorefilePath))
+        {
+            string json = File.ReadAllText(SaveHighScorefilePath);
+            scoreData = JsonUtility.FromJson<ScoreData>(json);
+        }
+        else
+        {
+            scoreData.highScores = new List<HighScore>() { };
+        }
+        
+        return scoreData.highScores;
+
+    }
 }

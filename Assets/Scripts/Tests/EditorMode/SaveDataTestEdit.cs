@@ -5,33 +5,29 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 public class SaveDataTestEdit
 {
     private string expectedJsonFilePath = Application.persistentDataPath + "/expected.json";
-    private string savePath = Application.persistentDataPath + "/savefile.json";
+    private string saveFilePath = Application.persistentDataPath + "/savefile.json";
+    //private string loadTestFilePath = Application.persistentDataPath + "/loadTest.json";
 
     [OneTimeSetUp]
     public void OneTimeSetup()
     {
         int NumberOfHighScoreGenerated = 2;
         ScoreData scoreExpected = new ScoreData();
+
+        scoreExpected.highScores = createHighScoresForTest(NumberOfHighScoreGenerated);
         
-
-        for (int i = 0; i<NumberOfHighScoreGenerated; i++)
-        {
-            HighScore highScoreExpected = new HighScore();
-            highScoreExpected.PlayerName = "PlayerNameTest" + i;
-            highScoreExpected.Score = i;
-            scoreExpected.highScores.Add(highScoreExpected);
-        }
-
         string jsonExpected = JsonUtility.ToJson(scoreExpected);
         File.WriteAllText(expectedJsonFilePath, jsonExpected);
+        //File.WriteAllText(loadTestFilePath, jsonExpected);
 
-        if (File.Exists(savePath))
+        if (File.Exists(saveFilePath))
         {
-            File.Delete(savePath);
+            File.Delete(saveFilePath);
         }
 
     }
@@ -39,17 +35,25 @@ public class SaveDataTestEdit
     [OneTimeTearDown]
     public void OneTimeTearDown()
     {
-        File.Delete(expectedJsonFilePath);
+        if (File.Exists(expectedJsonFilePath))
+        {
+            File.Delete(expectedJsonFilePath);
+        }
+        
+        if (File.Exists(saveFilePath))
+        {
+            File.Delete(saveFilePath);
+        }
     }
-    
+
     [Test]
     public void SaveHighScoreIsOkTest()
     {
         SaveData saveData = new();
         saveData.SaveHighScores();
-        JToken received = File.ReadAllText(savePath);
+        JToken received = File.ReadAllText(saveFilePath);
         JToken expected = File.ReadAllText(expectedJsonFilePath);
-        Assert.IsTrue(JToken.DeepEquals(received, expected));        
+        Assert.IsTrue(JToken.DeepEquals(received, expected));
     }
 
     [Test]
@@ -57,8 +61,55 @@ public class SaveDataTestEdit
     {
         SaveData saveData = new();
         saveData.SaveHighScores();
-        Assert.IsTrue(File.Exists(savePath));
+        Assert.IsTrue(File.Exists(saveFilePath));
     }
-    
 
+    [Test]
+    public void LoadHigScoreIsOkTest()
+    {
+        int NumberOfHighScoreGenerated = 2;
+        ScoreData scoreExpected = new ScoreData();
+        scoreExpected.highScores = createHighScoresForTest(NumberOfHighScoreGenerated);
+        string jsonExpected = JsonUtility.ToJson(scoreExpected);
+        File.WriteAllText(saveFilePath, jsonExpected);
+
+        SaveData saveData = new();
+        List<HighScore> highScores = saveData.loadHighScores();
+
+
+        List<HighScore> firstNotSecond = highScores.Except(scoreExpected.highScores).ToList();
+        List<HighScore> secondNotFirst = scoreExpected.highScores.Except(highScores).ToList();
+
+        Assert.IsTrue(!firstNotSecond.Any() && !secondNotFirst.Any());
+    }
+
+    [Test]
+    public void loadIfNoFileTest()
+    {
+        SaveData saveData = new();
+
+        if (File.Exists(saveFilePath))
+        {
+            File.Delete(saveFilePath);
+        }
+
+        List<HighScore> test = saveData.loadHighScores();
+
+        Assert.IsFalse(test.Any());
+    }
+
+    private List<HighScore> createHighScoresForTest(int NumberOfHigScoreItems)
+    {
+        List<HighScore> highScores = new List<HighScore>();
+
+        for (int i = 0; i < NumberOfHigScoreItems; i++)
+        {
+            HighScore highScore = new HighScore() { PlayerName = "PlayerNameTest" + i, Score = i };
+            highScores.Add(highScore);
+        }
+
+        return highScores;
+    }
+
+   
 }
