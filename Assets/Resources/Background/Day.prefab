@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 7812809640245576114}
   m_Layer: 3
   m_Name: Day
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

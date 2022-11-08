@@ -15,7 +15,7 @@ public class BackgroundTranslate : MonoBehaviour
         //Debug.Log(this.transform.position.x);
         if (this.transform.position.x < -19)
         {            
-            BackgroundsManager.Instance.createBackgroud();
+            BackgroundsManager.Instance.CreateBackgroud();
             BackgroundsManager.Instance.DestroyBackground(this.gameObject);
         }
 

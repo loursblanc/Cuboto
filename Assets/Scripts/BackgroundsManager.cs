@@ -8,10 +8,10 @@ public class BackgroundsManager : MonoBehaviour
     public static BackgroundsManager Instance { get; private set; }
     public List<GameObject> TypeOfBackgrounds;
     private static int ActiveBackground = 0;
-    private static int NumberOfActiveBackgroundIsInstanciated = 0;
-    private Vector3 BackGroundSpawn = new Vector3(18.9f, 0, 0);
+    public static int NumberOfActiveBackgroundIsInstanciated { get; private set; } = 0;
+    public  Vector3 BackGroundSpawn {get; private set; } = new Vector3(18.9f, 0, 0);
     [SerializeField] private int NumberRepetitionBackground = 2;
-    private string PrefixName = "Background"; 
+    public string PrefixName { get; private set; } = "Background"; 
 
 
     
@@ -26,14 +26,16 @@ public class BackgroundsManager : MonoBehaviour
             Instance = this;
         }
 
-        GameObject firstBackgroud = Instantiate(TypeOfBackgrounds[ActiveBackground], new Vector3(0, 0, 0), Quaternion.identity, GameObject.Find("Backgrounds").transform);
-        NumberOfActiveBackgroundIsInstanciated = 1;
-        firstBackgroud.name = PrefixName + "Start";
-        createBackgroud();
-
+        if (TypeOfBackgrounds != null)
+        {
+            GameObject firstBackgroud = Instantiate(TypeOfBackgrounds[ActiveBackground], Vector3.zero, Quaternion.identity, GameObject.Find("Backgrounds").transform);
+            NumberOfActiveBackgroundIsInstanciated = 1;
+            firstBackgroud.name = PrefixName + "Start";
+            CreateBackgroud();
+        }
     }
 
-    public void createBackgroud()
+    public void CreateBackgroud()
     {
         SelectActiveBackground();
         GameObject go = Instantiate(TypeOfBackgrounds[ActiveBackground], BackGroundSpawn, Quaternion.identity, GameObject.Find("Backgrounds").transform);        
@@ -43,7 +45,10 @@ public class BackgroundsManager : MonoBehaviour
 
     public void DestroyBackground(GameObject background)
     {
-        Destroy(background);
+        if(background.tag == "Background")
+        {
+            Destroy(background);
+        }        
     }
 
     private void SelectActiveBackground()
