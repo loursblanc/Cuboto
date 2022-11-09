@@ -16,7 +16,12 @@ public class IsGrounded : MonoBehaviour
      {
         if (collision.CompareTag("Ground"))
         {
-            playerController.IsGrounded = true;
+            if(playerController.PlayerControllerRigidbody2D.velocity.y <= 0)
+            {
+                playerController.IsGrounded = true;
+                playerController.CurrentJumpCount = 0;
+            }
+            
         }
      }
 
