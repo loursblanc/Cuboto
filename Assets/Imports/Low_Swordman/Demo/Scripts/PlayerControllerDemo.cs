@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerController : MonoBehaviour
+public abstract class PlayerControllerDemo: MonoBehaviour
 {
     public bool IsSit = false;
     public int currentJumpCount = 0; 
