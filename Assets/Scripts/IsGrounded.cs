@@ -16,12 +16,12 @@ public class IsGrounded : MonoBehaviour
      {
         if (collision.CompareTag("Ground"))
         {
-            playerController.isGrounded = true;
+            playerController.IsGrounded = true;
         }
      }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        playerController.isGrounded = false; 
+        playerController.IsGrounded = false; 
     }
 }
