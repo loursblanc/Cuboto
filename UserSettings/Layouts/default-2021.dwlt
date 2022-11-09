@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -8
-    y: 51
+    x: 0
+    y: 43
     width: 3440
     height: 1357
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 42
+  controlID: 159
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 573
+    width: 570
     height: 1307
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -164,14 +164,14 @@ MonoBehaviour:
   - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 573
+    x: 570
     y: 0
-    width: 1449
+    width: 1469
     height: 1307
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1449
-    height: 774
+    width: 1469
+    height: 773
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -208,23 +208,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 774
-    width: 1449
-    height: 533
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+    y: 773
+    width: 1469
+    height: 534
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,14 +242,14 @@ MonoBehaviour:
   - {fileID: 12}
   m_Position:
     serializedVersion: 2
-    x: 2022
+    x: 2039
     y: 0
-    width: 1418
+    width: 1401
     height: 1307
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 64
+  controlID: 160
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,10 +267,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 790
+    width: 717
     height: 1307
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -293,14 +293,14 @@ MonoBehaviour:
   - {fileID: 14}
   m_Position:
     serializedVersion: 2
-    x: 790
+    x: 717
     y: 0
-    width: 628
+    width: 684
     height: 1307
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 112
+  controlID: 123
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,10 +318,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 628
-    height: 871
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 684
+    height: 868
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -343,11 +343,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 871
-    width: 628
-    height: 436
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    y: 868
+    width: 684
+    height: 439
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -361,138 +361,370 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 565
-    y: 855
-    width: 1447
-    height: 512
+    x: 578
+    y: 846
+    width: 1440
+    height: 505
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_VersionControlStates: []
-    m_SoftLockControlStates: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts/Tests/EditorMode
-    m_Globs: []
-    m_OriginalText: 
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Scripts/Tests/EditorMode
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\lours\Documents\travail\ProjetPerso\Cuboto
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6600000
-    m_LastClickedID: 24774
-    m_ExpandedIDs: 000000007c6000007e60000094600000b2600000526100005c610000546b0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c6000007e600000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: ca600000
-    m_LastClickedInstanceID: 24778
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 261
+  m_Spl:
+    ID: 307
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 326
+    - 109
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 435
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1007
+      uniqueId: '[Cuboto][suite]'
+      name: Cuboto
+      fullName: Cuboto
+      resultStatus: 1
+      duration: 0.1830029
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1012
+      uniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
+      name: PlayMode.dll
+      fullName: C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll
+      resultStatus: 1
+      duration: 0.0921548
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[Cuboto][suite]'
+    - id: 1008
+      uniqueId: PlayMode.dll/[PlayMode][MenuUiHandlerTest][suite]
+      name: MenuUiHandlerTest
+      fullName: MenuUiHandlerTest
+      resultStatus: 1
+      duration: 0.0903559
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1012
+      parentUniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1011
+      uniqueId: PlayMode.dll/MenuUiHandlerTest/[PlayMode][MenuUiHandlerTest.SetPlayerNameIsOk]
+      name: SetPlayerNameIsOk
+      fullName: MenuUiHandlerTest.SetPlayerNameIsOk
+      resultStatus: 1
+      duration: 0.0729469
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: PlayMode.dll/[PlayMode][MenuUiHandlerTest][suite]
+    - id: 1003
+      uniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
+      name: NavigateUiHandlerTest
+      fullName: NavigateUiHandlerTest
+      resultStatus: 1
+      duration: 0.0873177
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1004
+      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StarMainGoGoodSceneTest]
+      name: StarMainGoGoodSceneTest
+      fullName: NavigateUiHandlerTest.StarMainGoGoodSceneTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
+    - id: 1005
+      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StartHighScoreGoGoodSceneTest]
+      name: StartHighScoreGoGoodSceneTest
+      fullName: NavigateUiHandlerTest.StartHighScoreGoGoodSceneTest
+      resultStatus: 1
+      duration: 0.0965285
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
+    - id: 1006
+      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StartMenuGoGoodSceneTest]
+      name: StartMenuGoGoodSceneTest
+      fullName: NavigateUiHandlerTest.StartMenuGoGoodSceneTest
+      resultStatus: 1
+      duration: 0.06123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
+    m_ResultText: StarNewGoGoodSceneTest (0,076s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 8f2c7a0d
+      m_LastClickedID: 226110607
+      m_ExpandedIDs: e699bfb766c201c162c0f3df9d49e419ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Cuboto][suite]'
+      name: Cuboto
+      fullName: Cuboto
+      resultStatus: 1
+      duration: 0.0385438
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1003
+      uniqueId: '[EditorMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll][suite]'
+      name: EditorMode.dll
+      fullName: C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll
+      resultStatus: 1
+      duration: 0.0237858
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Cuboto][suite]'
+    - id: 1010
+      uniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
+      name: SaveDataTestEdit
+      fullName: SaveDataTestEdit
+      resultStatus: 1
+      duration: 0.0228178
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1012
+      parentUniqueId: '[EditorMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll][suite]'
+    - id: 1004
+      uniqueId: EditorMode.dll/SaveDataTestEdit/[EditorMode][SaveDataTestEdit.LoadHigScoreIsOkTest]
+      name: LoadHigScoreIsOkTest
+      fullName: SaveDataTestEdit.LoadHigScoreIsOkTest
+      resultStatus: 1
+      duration: 0.0083247
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
+    - id: 1005
+      uniqueId: EditorMode.dll/SaveDataTestEdit/[EditorMode][SaveDataTestEdit.loadIfNoFileTest]
+      name: loadIfNoFileTest
+      fullName: SaveDataTestEdit.loadIfNoFileTest
+      resultStatus: 1
+      duration: 0.0007092
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
+    - id: 1002
+      uniqueId: EditorMode.dll/SaveDataTestEdit/[EditorMode][SaveDataTestEdit.SaveHighScoreIsOkTest]
+      name: SaveHighScoreIsOkTest
+      fullName: SaveDataTestEdit.SaveHighScoreIsOkTest
+      resultStatus: 1
+      duration: 0.0026397
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
+    - id: 1003
+      uniqueId: EditorMode.dll/SaveDataTestEdit/[EditorMode][SaveDataTestEdit.SaveHigScoreFileIsCreatedTest]
+      name: SaveHigScoreFileIsCreatedTest
+      fullName: SaveDataTestEdit.SaveHigScoreFileIsCreatedTest
+      resultStatus: 1
+      duration: 0.0004955
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
+    m_ResultText: SaveDataTestEdit (0,023s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 74b9e576
+      m_LastClickedID: 1994766708
+      m_ExpandedIDs: e699bfb70e0f6dc89170483774b9e576ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -513,9 +745,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -8
-    y: 81
-    width: 572
+    x: 0
+    y: 73
+    width: 569
     height: 1286
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -524,23 +756,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca600000
+      m_SelectedIDs: bc8b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 1eb7ffff6ab8ffff9abaffffccbcffff1cbeffffb4beffffa0c0ffffeac1ffff68c2ffffbcc3ffffaac6fffffcc7ffff48c9ffff9ecafffff0cbffff7eccfffffcccffff76cdfffffecdffff98ceffff12d0ffff9cd0ffff56d1ffffa4d2ffff2ed3ffff84d8fffff8d8ffff70d9ffffb6dafffff4dbffff82dcffffc8ddffff3adeffff7cdffffffadfffff36e1ffffc8e1ffffdee3ffff34e5ffffc0eaffffdeeaffff22ecffff94ecffff32eeffffa4eeffffb8efffffe8f0fffff4f1ffff76f2ffff90f3ffff1ef4ffff46f5fffff6f9ffff26fbffff967c0000dc7c0000
+      m_ExpandedIDs: d49bf9ff26fbffff1c600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Day
+        m_OriginalName: Day
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 35908
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -570,10 +802,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 565
-    y: 81
-    width: 1447
-    height: 753
+    x: 570
+    y: 73
+    width: 1467
+    height: 752
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -627,7 +859,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 26}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -830,9 +1062,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 276.51642, y: 157.98677, z: -8.636471}
+    m_Target: {x: -0.83916056, y: -4.117517, z: -0.54259676}
     speed: 2
-    m_Value: {x: 276.51642, y: 157.98677, z: -8.636471}
+    m_Value: {x: -0.83916056, y: -4.117517, z: -0.54259676}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -883,9 +1115,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 488.24948
+    m_Target: 12.541499
     speed: 2
-    m_Value: 488.24948
+    m_Value: 12.541499
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -918,325 +1150,138 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 565
-    y: 855
-    width: 1447
-    height: 512
+    x: 570
+    y: 846
+    width: 1467
+    height: 513
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_Spl:
-    ID: 144
-    splitterInitialOffset: 0
-    currentActiveSplitter: -1
-    realSizes:
-    - 331
-    - 111
-    relativeSizes:
-    - 0.75
-    - 0.25
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 442
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 18}
-    m_NewResultList:
-    - id: 1007
-      uniqueId: '[Cuboto][suite]'
-      name: Cuboto
-      fullName: Cuboto
-      resultStatus: 1
-      duration: 0.1830029
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1012
-      uniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
-      name: PlayMode.dll
-      fullName: C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll
-      resultStatus: 1
-      duration: 0.0921548
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1007
-      parentUniqueId: '[Cuboto][suite]'
-    - id: 1008
-      uniqueId: PlayMode.dll/[PlayMode][MenuUiHandlerTest][suite]
-      name: MenuUiHandlerTest
-      fullName: MenuUiHandlerTest
-      resultStatus: 1
-      duration: 0.0903559
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1011
-      uniqueId: PlayMode.dll/MenuUiHandlerTest/[PlayMode][MenuUiHandlerTest.SetPlayerNameIsOk]
-      name: SetPlayerNameIsOk
-      fullName: MenuUiHandlerTest.SetPlayerNameIsOk
-      resultStatus: 1
-      duration: 0.0729469
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: PlayMode.dll/[PlayMode][MenuUiHandlerTest][suite]
-    - id: 1003
-      uniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
-      name: NavigateUiHandlerTest
-      fullName: NavigateUiHandlerTest
-      resultStatus: 1
-      duration: 0.0873177
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1006
-      parentUniqueId: '[PlayMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1004
-      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StarMainGoGoodSceneTest]
-      name: StarMainGoGoodSceneTest
-      fullName: NavigateUiHandlerTest.StarMainGoGoodSceneTest
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
-    - id: 1005
-      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StartHighScoreGoGoodSceneTest]
-      name: StartHighScoreGoGoodSceneTest
-      fullName: NavigateUiHandlerTest.StartHighScoreGoGoodSceneTest
-      resultStatus: 1
-      duration: 0.0965285
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
-    - id: 1006
-      uniqueId: PlayMode.dll/NavigateUiHandlerTest/[PlayMode][NavigateUiHandlerTest.StartMenuGoGoodSceneTest]
-      name: StartMenuGoGoodSceneTest
-      fullName: NavigateUiHandlerTest.StartMenuGoGoodSceneTest
-      resultStatus: 1
-      duration: 0.06123
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: PlayMode.dll/[PlayMode][NavigateUiHandlerTest][suite]
-    m_ResultText: StarNewGoGoodSceneTest (0,076s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8f2c7a0d
-      m_LastClickedID: 226110607
-      m_ExpandedIDs: e699bfb766c201c162c0f3df9d49e419ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 18}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[Cuboto][suite]'
-      name: Cuboto
-      fullName: Cuboto
-      resultStatus: 2
-      duration: 0.0573733
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1003
-      uniqueId: '[EditorMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll][suite]'
-      name: EditorMode.dll
-      fullName: C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll
-      resultStatus: 2
-      duration: 0.0285527
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Cuboto][suite]'
-    - id: 1010
-      uniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
-      name: SaveDataTestEdit
-      fullName: SaveDataTestEdit
-      resultStatus: 2
-      duration: 0.0273147
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: '[EditorMode][C:/Users/lours/Documents/travail/ProjetPerso/Cuboto/Library/ScriptAssemblies/EditorMode.dll][suite]'
-    - id: 1002
-      uniqueId: EditorMode.dll/SaveDataTestEdit/[EditorMode][SaveDataTestEdit.SaveHighScoreIsOkTest]
-      name: SaveHighScoreIsOkTest
-      fullName: SaveDataTestEdit.SaveHighScoreIsOkTest
-      resultStatus: 2
-      duration: 0.0140409
-      messages: "  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at SaveDataTestEdit.SaveHighScoreIsOkTest () [0x00030] in C:\Users\lours\Documents\travail\ProjetPerso\Cuboto\Assets\Scripts\Tests\EditorMode\SaveDataTestEdit.cs:47
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditorMode.dll/[EditorMode][SaveDataTestEdit][suite]
-    m_ResultText: "SaveHighScoreIsOkTest (0,014s)\n---\nExpected: True\r\n  But was: 
-      False\n---\nat SaveDataTestEdit.SaveHighScoreIsOkTest () [0x00030] in C:\\Users\\lours\\Documents\\travail\\ProjetPerso\\Cuboto\\Assets\\Scripts\\Tests\\EditorMode\\SaveDataTestEdit.cs:47"
-    m_ResultStacktrace: 'at SaveDataTestEdit.SaveHighScoreIsOkTest () [0x00030] in
-      C:\Users\lours\Documents\travail\ProjetPerso\Cuboto\Assets\Scripts\Tests\EditorMode\SaveDataTestEdit.cs:47
-
-'
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7716c37a
-      m_LastClickedID: 2059605623
-      m_ExpandedIDs: e699bfb70e0f6dc89170483774b9e576ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Prefabs
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\lours\Documents\travail\ProjetPerso\Cuboto
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 94610000
+    m_LastClickedID: 24980
+    m_ExpandedIDs: 000000006c6100006e61000070610000726100007461000076610000786100007a6100007c6100007e610000806100008261000084610000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 9}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 000000006c6100006e61000070610000726100007461000076610000786100007a6100007c6100007e610000806100008261000084610000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000000000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 9}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 261
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1257,9 +1302,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2014
-    y: 81
-    width: 788
+    x: 2039
+    y: 73
+    width: 715
     height: 1286
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1298,10 +1343,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2804
-    y: 81
-    width: 627
-    height: 850
+    x: 2756
+    y: 73
+    width: 683
+    height: 847
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1312,7 +1357,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 627, y: 353}
+  m_TargetSize: {x: 683, y: 384}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1327,10 +1372,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -313.5
-    m_HBaseRangeMax: 313.5
-    m_VBaseRangeMin: -176.5
-    m_VBaseRangeMax: 176.5
+    m_HBaseRangeMin: -341.5
+    m_HBaseRangeMax: 341.5
+    m_VBaseRangeMin: -192
+    m_VBaseRangeMax: 192
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1348,23 +1393,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 627
-      height: 829
+      width: 683
+      height: 826
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 313.5, y: 414.5}
+    m_Translation: {x: 341.5, y: 413}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -313.5
-      y: -414.5
-      width: 627
-      height: 829
+      x: -341.5
+      y: -413
+      width: 683
+      height: 826
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 627, y: 850}
+  m_LastWindowPixelSize: {x: 683, y: 847}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1390,10 +1435,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2804
-    y: 952
-    width: 627
-    height: 415
+    x: 2756
+    y: 941
+    width: 683
+    height: 418
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
