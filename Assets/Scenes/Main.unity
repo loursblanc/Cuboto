@@ -415,14 +415,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 570946031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152610797f71f8f46b0b39118edb3e2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b3a0ff059187b74caabac66cbe226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsGrounded: 0
   IsCrouch: 0
   CurrentJumpCount: 0
   JumpCount: 1
-  jumpForce: 2.75
+  jumpForce: 3
   PlayerControllerRigidbody2D: {fileID: 0}
 --- !u!70 &570946033
 CapsuleCollider2D:
