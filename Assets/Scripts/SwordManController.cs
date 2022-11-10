@@ -11,7 +11,7 @@ public class SwordManController : PlayerController
     private float capsuleOffsetYStand = 1.33f;
 
 
-    protected override void CrounchDown()
+    public override void CrounchDown()
     {
         IsCrouch = true;
         Anim.Play("Sit");
@@ -21,7 +21,7 @@ public class SwordManController : PlayerController
     }    
 
 
-    protected override void CrounchUp()
+    public override void CrounchUp()
     {
         IsCrouch = false;
         Anim.Play("Run");

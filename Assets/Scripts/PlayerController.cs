@@ -3,7 +3,6 @@ using UnityEngine;
 
 public abstract class PlayerController : MonoBehaviour
 {
-
     [Header("[Status]")]
     public bool IsGrounded;
     [SerializeField] protected bool IsCrouch = false;
@@ -16,19 +15,21 @@ public abstract class PlayerController : MonoBehaviour
     protected Animator Anim;
     public Rigidbody2D PlayerControllerRigidbody2D;
     protected CapsuleCollider2D playerCapsuleCollider2D;
+    private Movement movement;
 
 
 
     private void Awake()
     {
+        Debug.Log("Awake");
         Anim = this.transform.Find("SwordMan").GetComponent<Animator>();
         PlayerControllerRigidbody2D = this.GetComponent<Rigidbody2D>();
         playerCapsuleCollider2D = this.GetComponent<CapsuleCollider2D>();
-
+        movement = new Movement(jumpForce);
     }
 
 
-private void Update()
+    private void Update()
     {
         CheckInput();
     }
@@ -50,25 +51,25 @@ private void Update()
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         //TODO: Manage the case where the force is too high on the second jump
         if (IsGrounded || CurrentJumpCount < JumpCount)
         {
             CurrentJumpCount++;
             Anim.Play("Jump");
-            PlayerControllerRigidbody2D.AddForce(Vector2.up * (100 * (jumpForce)));
+            PlayerControllerRigidbody2D.AddForce(movement.Jump());
         }
     }
 
     
-    protected virtual void CrounchDown()
+    public virtual void CrounchDown()
     {
         IsCrouch = true;
         Anim.Play("Sit");
     }
 
-    protected virtual void CrounchUp()
+    public virtual void CrounchUp()
     {
         Anim.Play("Run");
         IsCrouch = false;
