@@ -21,7 +21,6 @@ public abstract class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake");
         Anim = this.transform.Find("SwordMan").GetComponent<Animator>();
         PlayerControllerRigidbody2D = this.GetComponent<Rigidbody2D>();
         playerCapsuleCollider2D = this.GetComponent<CapsuleCollider2D>();

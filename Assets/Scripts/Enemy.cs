@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
 
     private Rigidbody2D _rigidbody2D;
@@ -23,5 +23,10 @@ public class Enemies : MonoBehaviour
     void FixedUpdate()
     {
         _rigidbody2D.AddForce((Vector2.left * 0.1f), ForceMode2D.Impulse);
+        
+        if(transform.position.x < -17)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

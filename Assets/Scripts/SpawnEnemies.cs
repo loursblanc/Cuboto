@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<GameObject> enemies;
+
+    private void Awake()
     {
+
+       
+        if (enemies == null || enemies.Count == 0)
+        {
+            GameObject[] ressourcesEnemies = Resources.LoadAll<GameObject>("Enemies/Prefabs"); 
+            foreach(GameObject enemy in ressourcesEnemies)
+            {
+                if (enemy.tag == "Enemy")
+                {
+                    enemies.Add(enemy);
+                }
+            
+            }            
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        StartCoroutine(spawnEnemies());
+    }
+
+    private IEnumerator spawnEnemies()
+    {
+        while (true) { 
+            Instantiate(enemies[0],new Vector3(14f,-3.9f,0),Quaternion.identity);
+            yield return new WaitForSeconds(3f);
+        }
     }
 }
