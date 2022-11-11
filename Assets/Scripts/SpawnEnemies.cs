@@ -8,8 +8,7 @@ public class SpawnEnemies : MonoBehaviour
 
     private void Awake()
     {
-
-       
+  
         if (enemies == null || enemies.Count == 0)
         {
             GameObject[] ressourcesEnemies = Resources.LoadAll<GameObject>("Enemies/Prefabs"); 
@@ -27,14 +26,16 @@ public class SpawnEnemies : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(spawnEnemies());
+        StartCoroutine(spawnEnemies());     
     }
 
     private IEnumerator spawnEnemies()
     {
         while (true) { 
-            Instantiate(enemies[0],new Vector3(14f,-3.9f,0),Quaternion.identity);
-            yield return new WaitForSeconds(3f);
+            Instantiate(enemies[Random.Range(0,enemies.Count)],new Vector3(14f,-3.9f,0),Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(3f,4f));
+            Instantiate(enemies[Random.Range(0, enemies.Count)], new Vector3(14f, -3.9f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(1f,2f));
         }
     }
 }
