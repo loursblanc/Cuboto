@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 4868515331449996}
   - component: {fileID: -8505723668551192149}
   - component: {fileID: 680409071284982481}
-  - component: {fileID: 330148086293921703}
+  - component: {fileID: 3700941578899021671}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -996,7 +996,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &330148086293921703
+--- !u!114 &3700941578899021671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1009,6 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  RollIsPossible: 1
+  PercentageOfRolling: 20
 --- !u!1 &1849251020213892
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,4 +73,10 @@ public abstract class PlayerController : MonoBehaviour
         Anim.Play("Run");
         IsCrouch = false;
     }
+
+    public void TouchByEnemy()
+    {
+        this.transform.localScale = new Vector3(1,1,1);
+        Anim.Play("Die");
+    }
 }

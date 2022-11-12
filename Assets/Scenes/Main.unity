@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3700941578899021671, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
+      propertyPath: PercentageOfRolling
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 7814100980864434554, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -570,7 +574,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!4 &570946035
 Transform:
   m_ObjectHideFlags: 0

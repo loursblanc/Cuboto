@@ -31,10 +31,12 @@ public class SpawnEnemies : MonoBehaviour
 
     private IEnumerator spawnEnemies()
     {
-        while (true) { 
-            Instantiate(enemies[Random.Range(0,enemies.Count)],new Vector3(14f,-3.9f,0),Quaternion.identity);
+        while (true) {
+            int randomFirstEnemy = Random.Range(0, enemies.Count);
+            GameObject firstEnemy = Instantiate(enemies[randomFirstEnemy],new Vector3(14f,-3.9f,0),Quaternion.identity);
             yield return new WaitForSeconds(Random.Range(3f,4f));
-            Instantiate(enemies[Random.Range(0, enemies.Count)], new Vector3(14f, -3.9f, 0), Quaternion.identity);
+            int randomSecondEnemy = Random.Range(0, enemies.Count);
+            Instantiate(enemies[randomSecondEnemy], new Vector3(14f, -3.9f, 0), Quaternion.identity);
             yield return new WaitForSeconds(Random.Range(1f,2f));
         }
     }
