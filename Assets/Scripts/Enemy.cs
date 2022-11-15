@@ -52,19 +52,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        Debug.Log(ScoreValue);
-    }
-    // Update is called once per frame
     void FixedUpdate()
     {
         _rigidbody2D.AddForce(movement.EnemyMoveLeft(speed),ForceMode2D.Impulse);
         
         if(transform.position.x < -17)
         {
+            GameManager.CurrentScore += ScoreValue;            
             Destroy(this.gameObject);
-
         }
     }
 
@@ -73,6 +68,7 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.SendMessage("TouchByEnemy");
+            GameManager.GameState = GameManager.GAMESTATE.Over;
             Destroy(this.gameObject);   
         }
     }
