@@ -35,6 +35,8 @@ public static class GameManager
                         Time.timeScale = 0;
                         break;
                     case GAMESTATE.Over:
+                        SaveData saveData = new SaveData();
+                        saveData.SaveHighScores(CurrentScore);
                         Time.timeScale = 0;
                         break;
                     default:

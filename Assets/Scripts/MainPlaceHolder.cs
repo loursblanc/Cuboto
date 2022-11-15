@@ -11,7 +11,7 @@ public class MainPlaceHolder : MonoBehaviour
             GameObject go = new GameObject();
             go.AddComponent<MainManager>();
         }
-        MainManager.Instance.Score ++ ;        
+       // MainManager.Instance.Score ++ ;        
     }
   
 }

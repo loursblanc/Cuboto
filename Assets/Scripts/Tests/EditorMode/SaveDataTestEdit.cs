@@ -50,7 +50,7 @@ public class SaveDataTestEdit
     public void SaveHighScoreIsOkTest()
     {
         SaveData saveData = new();
-        saveData.SaveHighScores();
+        saveData.SaveHighScores(50);
         JToken received = File.ReadAllText(saveFilePath);
         JToken expected = File.ReadAllText(expectedJsonFilePath);
         Assert.IsTrue(JToken.DeepEquals(received, expected));
@@ -60,7 +60,7 @@ public class SaveDataTestEdit
     public void SaveHigScoreFileIsCreatedTest()
     {
         SaveData saveData = new();
-        saveData.SaveHighScores();
+        saveData.SaveHighScores(50);
         Assert.IsTrue(File.Exists(saveFilePath));
     }
 
@@ -74,7 +74,7 @@ public class SaveDataTestEdit
         File.WriteAllText(saveFilePath, jsonExpected);
 
         SaveData saveData = new();
-        List<HighScore> highScores = saveData.loadHighScores();
+        List<HighScore> highScores = saveData.LoadHighScores();
 
 
         List<HighScore> firstNotSecond = highScores.Except(scoreExpected.highScores).ToList();
@@ -93,7 +93,7 @@ public class SaveDataTestEdit
             File.Delete(saveFilePath);
         }
 
-        List<HighScore> test = saveData.loadHighScores();
+        List<HighScore> test = saveData.LoadHighScores();
 
         Assert.IsFalse(test.Any());
     }
@@ -104,7 +104,7 @@ public class SaveDataTestEdit
 
         for (int i = 0; i < NumberOfHigScoreItems; i++)
         {
-            HighScore highScore = new HighScore() { PlayerName = "PlayerNameTest" + i, Score = i };
+            HighScore highScore = new HighScore("PlayerNameTest" + i,  i);
             highScores.Add(highScore);
         }
 

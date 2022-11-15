@@ -7,12 +7,14 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
     public string PlayerName = "---";
-    public int Score = 0; 
+    public List<HighScore> HighScores;
+    //public int Score = 0; 
 
     private void Awake()
     {
         SaveData saveData = new SaveData();
-        saveData.SaveHighScores();
+        HighScores = saveData.LoadHighScores();
+        //saveData.SaveHighScores();
         if(Instance != null)
         {
             Destroy(Instance);

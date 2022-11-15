@@ -8,6 +8,13 @@ public class HighScore : IEquatable<HighScore>
 {
     public string PlayerName;
     public int Score;
+    //private int currentScore;
+
+    public HighScore(string playerName, int score)
+    {
+        PlayerName = playerName;
+        Score = score;
+    }
 
     public override bool Equals(object obj)
     {
