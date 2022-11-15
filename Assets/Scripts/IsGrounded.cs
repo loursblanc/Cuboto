@@ -6,27 +6,58 @@ public class IsGrounded : MonoBehaviour
 {
 
     private PlayerController playerController;
+    private Enemy enemy;
 
     public void Awake()
     {
-        playerController = this.transform.root.GetComponent<PlayerController>();
+        if(this.transform.root.tag == "Player")
+        {
+            playerController = this.transform.root.GetComponent<PlayerController>();
+        }
+        else
+        {
+            enemy = this.transform.root.GetComponent<Enemy>();
+        }
+        
+        
     }
 
      void OnTriggerStay2D(Collider2D collision)
      {
         if (collision.CompareTag("Ground"))
         {
-            if(playerController.PlayerControllerRigidbody2D.velocity.y <= 0)
+            if (this.transform.root.tag == "Player")
             {
-                playerController.IsGrounded = true;
-                playerController.CurrentJumpCount = 0;
+                if (playerController.PlayerControllerRigidbody2D.velocity.y <= 0)
+                {
+                    playerController.IsGrounded = true;
+                    playerController.CurrentJumpCount = 0;
+                }
             }
+            else
+            {
+                if (enemy._rigidbody2D.velocity.y <= 0)
+                {
+                    enemy.IsGrounded = true;
+                    enemy.CurrentJumpCount = 0;
+                }
+            }
+
+        
+            
             
         }
      }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        playerController.IsGrounded = false; 
+        if (this.transform.root.tag == "Player")
+        {
+            playerController.IsGrounded = false;
+        }
+        else
+        {
+            enemy.IsGrounded = false;
+        }
     }
 }

@@ -19,7 +19,7 @@ public class MovementTest
     public void JumpIsOk()
     {
         Vector2 jump = movement.Jump();
-        float jumpY = movement.ForForceMultiplierce * JumpForce;
+        float jumpY = movement.ForceMultiplierce * JumpForce;
         Vector2 expected = new Vector2(0, jumpY);
         Assert.AreEqual(expected, jump);       
     }

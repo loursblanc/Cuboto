@@ -5,18 +5,22 @@ using UnityEngine;
 public class Movement
 
 {
-    private float JumpForce;
-    public float ForForceMultiplierce = 100;
+    private float Jumpforce;
+    public float ForceMultiplierce = 100;
 
-    public Movement(float jumpForce)
+
+    public Movement(float jumpforce)
     {
-        JumpForce = jumpForce;
+        Jumpforce = jumpforce;
     }
-
 
     public Vector2 Jump()
     {       
-            return (Vector2.up * (ForForceMultiplierce * (JumpForce)));
+            return (Vector2.up * (ForceMultiplierce * (Jumpforce)));
     }
-    
+
+    public Vector2 EnemyMoveLeft(float speed)
+    {
+        return Vector2.left * (0.1f * (speed / 10));
+    }    
 }
