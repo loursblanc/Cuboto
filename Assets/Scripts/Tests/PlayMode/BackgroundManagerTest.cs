@@ -11,7 +11,6 @@ public class BackgroundManagerTest : MonoBehaviour
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
-        Debug.Log("OneTime");
         GameObject go = new GameObject();
         backgroundsManager = go.AddComponent<BackgroundsManager>();
         GameObject[] backGroundPrefabs = Resources.LoadAll<GameObject>("Background");

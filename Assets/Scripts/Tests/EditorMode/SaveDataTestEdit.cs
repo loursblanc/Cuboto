@@ -10,7 +10,7 @@ using System.Linq;
 public class SaveDataTestEdit
 {
     private string expectedJsonFilePath = Application.persistentDataPath + "/expected.json";
-    private string saveFilePath = Application.persistentDataPath + "/savefile.json";
+    private string saveFilePath = Application.persistentDataPath + "/cubotoSave.json";
     //private string loadTestFilePath = Application.persistentDataPath + "/loadTest.json";
 
     [OneTimeSetUp]
@@ -46,23 +46,26 @@ public class SaveDataTestEdit
         }
     }
 
-    [Test]
-    public void SaveHighScoreIsOkTest()
-    {
-        SaveData saveData = new();
-        saveData.SaveHighScores(50);
-        JToken received = File.ReadAllText(saveFilePath);
-        JToken expected = File.ReadAllText(expectedJsonFilePath);
-        Assert.IsTrue(JToken.DeepEquals(received, expected));
-    }
 
-    [Test]
-    public void SaveHigScoreFileIsCreatedTest()
-    {
-        SaveData saveData = new();
-        saveData.SaveHighScores(50);
-        Assert.IsTrue(File.Exists(saveFilePath));
-    }
+    //TODO To be switched to the PlayMode side because of the Main Manager instance
+    //[Test]
+    //public void SaveHighScoreIsOkTest()
+    //{
+    //    SaveData saveData = new();
+    //    saveData.SaveHighScores(50);
+    //    JToken received = File.ReadAllText(saveFilePath);
+    //    JToken expected = File.ReadAllText(expectedJsonFilePath);
+    //    Assert.IsTrue(JToken.DeepEquals(received, expected));
+    //}
+
+    //TODO To be switched to the PlayMode side because of the Main Manager instance
+    //[Test]
+    //public void SaveHigScoreFileIsCreatedTest()
+    //{
+    //    SaveData saveData = new();
+    //    saveData.SaveHighScores(50);
+    //    Assert.IsTrue(File.Exists(saveFilePath));
+    //}
 
     [Test]
     public void LoadHigScoreIsOkTest()
