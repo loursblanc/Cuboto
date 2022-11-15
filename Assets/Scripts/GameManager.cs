@@ -73,7 +73,10 @@ public static class GameManager
     {
         GameStateChanged = null;
         ScoreChanged = null;
+        _currentScore = 0;
+
         NavigateUiHandler navigateUiHandler = new NavigateUiHandler();
         navigateUiHandler.StartMain();
+        GameState = GAMESTATE.Running;
     }
 }

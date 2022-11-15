@@ -10,12 +10,11 @@ public class MainUiHandler : MonoBehaviour
     [SerializeField] private TMP_Text PlayerNameText;
     [SerializeField] private TMP_Text ScoreText;
     [SerializeField] private TMP_Text GameStatusText;
-    [SerializeField] private Image PauseMenu; 
-    
-    
+    [SerializeField] private Image PauseMenu;
+
     private void Start()
     {
-        setPlayerNameText();
+        SetPlayerNameText();
         setScore(000);
         
         GameManager.ScoreChanged += delegate (int currentScore)
@@ -25,7 +24,14 @@ public class MainUiHandler : MonoBehaviour
 
         GameManager.GameStateChanged += delegate (GameManager.GAMESTATE gameState)
         {
-            GameStatusText.text = " Game "  + gameState;
+            if(gameState != GameManager.GAMESTATE.Running) { 
+                GameStatusText.text = " Game "  + gameState;
+                PauseMenu.gameObject.SetActive(true);
+            }
+            else
+            {
+                PauseMenu.gameObject.SetActive(false);
+            }
         };
       }
 
@@ -38,19 +44,16 @@ public class MainUiHandler : MonoBehaviour
 
             if(GameManager.GameState == GameManager.GAMESTATE.Running)
             {
-                GameManager.GameState = GameManager.GAMESTATE.Paused;
-                PauseMenu.gameObject.SetActive(true);
+                GameManager.GameState = GameManager.GAMESTATE.Paused;    
             }
             else
             {
-                GameManager.GameState = GameManager.GAMESTATE.Running;
-                PauseMenu.gameObject.SetActive(false);
-
+                GameManager.GameState = GameManager.GAMESTATE.Running;                
             }
         }
     }
 
-    private void setPlayerNameText()
+    private void SetPlayerNameText()
     {
         if (MainManager.Instance != null)
         {
@@ -65,5 +68,10 @@ public class MainUiHandler : MonoBehaviour
         {
             ScoreText.text = " Score : " + score;
         }
+    }
+
+    public void RestartMain()
+    {
+        GameManager.Restart();
     }
 }
