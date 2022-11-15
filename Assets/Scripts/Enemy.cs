@@ -17,10 +17,14 @@ public class Enemy : MonoBehaviour
         [Range(0, 100)]
         public int PercentageOfJump;
         public float JumpForce;
+        
 
     [Header("Status")]
         public bool IsGrounded;
         public int CurrentJumpCount;
+
+    [Header("Gameplay")]
+    public int ScoreValue = 10;
 
     public Rigidbody2D _rigidbody2D;
     private Movement movement;
@@ -50,7 +54,7 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("adieu");
+        Debug.Log(ScoreValue);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -60,6 +64,7 @@ public class Enemy : MonoBehaviour
         if(transform.position.x < -17)
         {
             Destroy(this.gameObject);
+
         }
     }
 

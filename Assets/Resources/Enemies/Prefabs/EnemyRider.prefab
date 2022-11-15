@@ -638,10 +638,11 @@ MonoBehaviour:
   RollIsPossible: 0
   PercentageOfRolling: 0
   JumpIsPossible: 1
-  PercentageOfJump: 100
+  PercentageOfJump: 40
   JumpForce: 2.8
   IsGrounded: 0
   CurrentJumpCount: 0
+  ScoreValue: 20
   _rigidbody2D: {fileID: 0}
 --- !u!1 &1681362357135472
 GameObject:
