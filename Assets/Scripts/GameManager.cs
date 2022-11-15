@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GameManager
 {
@@ -11,6 +12,7 @@ public static class GameManager
         Paused,
         Over
     }
+
 
     public delegate void gameStateChange(GAMESTATE gameState);
     public static event gameStateChange GameStateChanged;
@@ -65,7 +67,13 @@ public static class GameManager
         }
 
 
+    } 
+    
+    public static void Restart()
+    {
+        GameStateChanged = null;
+        ScoreChanged = null;
+        NavigateUiHandler navigateUiHandler = new NavigateUiHandler();
+        navigateUiHandler.StartMain();
     }
-    
-    
 }

@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         
         if(transform.position.x < -17)
         {
-            GameManager.CurrentScore += ScoreValue;
+            GameManager.CurrentScore += ScoreValue;            
             Destroy(this.gameObject);
         }
     }
@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.SendMessage("TouchByEnemy");
+            GameManager.GameState = GameManager.GAMESTATE.Over;
             Destroy(this.gameObject);   
         }
     }

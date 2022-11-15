@@ -35,16 +35,16 @@ public abstract class PlayerController : MonoBehaviour
 
     public void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S ) && GameManager.GameState == GameManager.GAMESTATE.Running)
         {
             CrounchDown();
         }
-        else if (Input.GetKeyUp(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.S) && GameManager.GameState == GameManager.GAMESTATE.Running)
         {
             CrounchUp();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))     
+        if (Input.GetKeyDown(KeyCode.Space) && GameManager.GameState == GameManager.GAMESTATE.Running)     
         {
             Jump();
         }
