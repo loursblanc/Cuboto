@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainUiHandler : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MainUiHandler : MonoBehaviour
 
     private void Start()
     {
+        
+        GameManager.GameState = GameManager.GAMESTATE.Running;
+        
         SetPlayerNameText();
         setScore(000);
         
@@ -73,5 +77,11 @@ public class MainUiHandler : MonoBehaviour
     public void RestartMain()
     {
         GameManager.Restart();
+    }
+
+    public void goMainMenu()
+    {
+        //NavigateUiHandler navigateUiHandler = new NavigateUiHandler();
+        //navigateUiHandler.StartMain();
     }
 }

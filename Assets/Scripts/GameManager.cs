@@ -77,8 +77,7 @@ public static class GameManager
         ScoreChanged = null;
         _currentScore = 0;
 
-        NavigateUiHandler navigateUiHandler = new NavigateUiHandler();
-        navigateUiHandler.StartMain();
         GameState = GAMESTATE.Running;
+        SceneManager.LoadScene(1);        
     }
 }

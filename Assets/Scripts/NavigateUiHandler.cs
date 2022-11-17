@@ -8,6 +8,7 @@ public class NavigateUiHandler : MonoBehaviour
 
     public void StartMain()
     {
+        GameManager.Restart();
         SceneManager.LoadScene(1);
     }
 
